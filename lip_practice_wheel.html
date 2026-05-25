@@ -14,7 +14,7 @@
   .wheel-svg { display: block; margin: 0 auto; cursor: pointer; }
   .practice-circle { transition: transform 0.18s; }
   .practice-circle:hover { transform: scale(1.07); }
-  .detail-panel { margin: 20px 8px 8px; border-radius: 10px; padding: 20px 22px; background: #FAF5EC; border: 1px solid #E6DCCD; min-height: 90px; }
+  .detail-panel { margin: 20px 8px 8px;  padding: 20px 22px; background: #FAF5EC;  min-height: 90px; }
   .detail-num { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6FB0C9; margin-bottom: 6px; }
   .detail-name { font-family: 'Merriweather', Georgia, serif; font-size: 17px; font-weight: 700; color: #EC7A52; margin-bottom: 10px; line-height: 1.3; }
   .detail-desc { font-size: 14px; color: #1B3247; line-height: 1.7; }
@@ -73,7 +73,7 @@
     </g>
   </svg>
   <div class="detail-panel" id="detail-panel">
-    <p class="detail-empty">Select a practice type above to read more</p>
+    
   </div>
 </div>
 <script>
@@ -89,7 +89,7 @@
   function selectPractice(i) {
     if (active === i) {
       active = -1;
-      document.getElementById('detail-panel').innerHTML = '<p class="detail-empty">Select a practice type above to read more</p>';
+      document.getElementById('detail-panel').innerHTML = '';
       document.getElementById('pc-' + i).classList.remove('active');
       return;
     }
