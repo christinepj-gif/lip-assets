@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Literacy in Practice — Six Practice Types Wheel</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #FAF5EC; font-family: Arial, sans-serif; }
+  .wheel-wrap { padding: 28px 16px 8px; max-width: 600px; margin: 0 auto; }
+  .wheel-title { font-family: 'Merriweather', Georgia, serif; font-size: 18px; font-weight: 700; color: #1B3247; text-align: center; margin-bottom: 4px; }
+  .wheel-sub { font-size: 12px; color: #6FB0C9; text-align: center; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 500; margin-bottom: 24px; }
+  .wheel-svg { display: block; margin: 0 auto; cursor: pointer; }
+  .practice-circle { transition: transform 0.18s; }
+  .practice-circle:hover { transform: scale(1.07); }
+  .detail-panel { margin: 20px 8px 8px;  padding: 20px 22px; background: #FAF5EC;  min-height: 90px; }
+  .detail-num { font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: #6FB0C9; margin-bottom: 6px; }
+  .detail-name { font-family: 'Merriweather', Georgia, serif; font-size: 17px; font-weight: 700; color: #EC7A52; margin-bottom: 10px; line-height: 1.3; }
+  .detail-desc { font-size: 14px; color: #1B3247; line-height: 1.7; }
+  .detail-empty { font-size: 13px; color: #9CA3AF; font-style: italic; text-align: center; padding: 16px 0; }
+</style>
+</head>
+<body>
+<div class="wheel-wrap">
+  <p class="wheel-title">Literacy in Practice</p>
+  <p class="wheel-sub">Six practice types — select one to explore</p>
+  <svg class="wheel-svg" width="100%" viewBox="0 0 400 385" role="img">
+    <title>Six literacy practice types arranged in a circle</title>
+    <desc>An interactive wheel showing six practice types: Test-focused, Institutional and civic, Instructional, Disciplinary, Reading books, and Creative and expressive.</desc>
+    <circle cx="200" cy="192" r="48" fill="#1B3247"/>
+    <text x="200" y="186" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#FAF5EC">Six</text>
+    <text x="200" y="200" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#EC7A52">practice</text>
+    <text x="200" y="214" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#FAF5EC">types</text>
+    <line x1="200" y1="144" x2="200" y2="110" stroke="#E6DCCD" stroke-width="1.5"/>
+    <line x1="200" y1="240" x2="200" y2="274" stroke="#E6DCCD" stroke-width="1.5"/>
+    <line x1="155" y1="167" x2="125" y2="150" stroke="#E6DCCD" stroke-width="1.5"/>
+    <line x1="245" y1="167" x2="275" y2="150" stroke="#E6DCCD" stroke-width="1.5"/>
+    <line x1="155" y1="217" x2="125" y2="234" stroke="#E6DCCD" stroke-width="1.5"/>
+    <line x1="245" y1="217" x2="275" y2="234" stroke="#E6DCCD" stroke-width="1.5"/>
+    <g class="practice-circle" id="pc-0" onclick="selectPractice(0)" style="transform-origin:200px 82px">
+      <circle cx="200" cy="82" r="52" fill="#FDEEE8" stroke="#D4856A" stroke-width="1.5"/>
+      <text x="200" y="72" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="500" fill="#6FB0C9" letter-spacing="1">01</text>
+      <text x="200" y="88" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">Test-focused</text>
+    </g>
+    <g class="practice-circle" id="pc-1" onclick="selectPractice(1)" style="transform-origin:312px 132px">
+      <circle cx="312" cy="132" r="52" fill="#E4F2F8" stroke="#5A9AB8" stroke-width="1.5"/>
+      <text x="312" y="122" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="500" fill="#6FB0C9" letter-spacing="1">02</text>
+      <text x="312" y="136" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">Institutional</text>
+      <text x="312" y="150" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">&amp; civic</text>
+    </g>
+    <g class="practice-circle" id="pc-2" onclick="selectPractice(2)" style="transform-origin:312px 252px">
+      <circle cx="312" cy="252" r="52" fill="#EDE7D9" stroke="#A89880" stroke-width="1.5"/>
+      <text x="312" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="500" fill="#6FB0C9" letter-spacing="1">03</text>
+      <text x="312" y="258" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">Instructional</text>
+    </g>
+    <g class="practice-circle" id="pc-3" onclick="selectPractice(3)" style="transform-origin:200px 302px">
+      <circle cx="200" cy="302" r="52" fill="#E0F0ED" stroke="#5A9E8C" stroke-width="1.5"/>
+      <text x="200" y="292" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="500" fill="#6FB0C9" letter-spacing="1">04</text>
+      <text x="200" y="308" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">Disciplinary</text>
+    </g>
+    <g class="practice-circle" id="pc-4" onclick="selectPractice(4)" style="transform-origin:88px 252px">
+      <circle cx="88" cy="252" r="52" fill="#E4EAF0" stroke="#6080A0" stroke-width="1.5"/>
+      <text x="88" y="242" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="500" fill="#6FB0C9" letter-spacing="1">05</text>
+      <text x="88" y="256" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">Reading</text>
+      <text x="88" y="270" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">books</text>
+    </g>
+    <g class="practice-circle" id="pc-5" onclick="selectPractice(5)" style="transform-origin:88px 132px">
+      <circle cx="88" cy="132" r="52" fill="#F5EAD8" stroke="#C0924A" stroke-width="1.5"/>
+      <text x="88" y="122" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" font-weight="500" fill="#6FB0C9" letter-spacing="1">06</text>
+      <text x="88" y="136" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">Creative &amp;</text>
+      <text x="88" y="150" text-anchor="middle" font-family="Merriweather,Georgia,serif" font-size="11" font-weight="700" fill="#1B3247">expressive</text>
+    </g>
+  </svg>
+  <div class="detail-panel" id="detail-panel">
+    
+  </div>
+</div>
+<script>
+  var practices = [
+    { num: "01", name: "Test-focused practices", desc: "Literacy organised around a specific goal the learner holds — passing a driving test, earning a high school equivalency, gaining a certification or licence. The test is real, the timeline is the learner's, and the stakes belong to them. Reading and writing are purposeful and focused: study guides, practice tests, application forms. This is not the same as a program's reporting requirements — the difference is who the outcome serves." },
+    { num: "02", name: "Institutional and civic practices", desc: "Navigating the literacy demands of systems — government forms, medical paperwork, legal documents, tenancy agreements, benefit applications. The texts are real, the consequences are real, and most were not written with the reader in mind. Civic participation extends this further: understanding rights, following public information, engaging with community life. Adult learners encounter these texts constantly, often under pressure and without support." },
+    { num: "03", name: "Instructional practices", desc: "Reading to do something — recipes, manuals, how-to guides, safety instructions, medication directions, assembly steps. The text is a means to an action, not an end in itself. Sequence matters, precision matters, and knowing when to stop and re-read matters. These texts are everywhere in adult learners' daily lives." },
+    { num: "04", name: "Disciplinary practices", desc: "The literacy conventions of specific fields — in work (healthcare, trades, service) and in study (history, science, law). Adult learners encounter these practices when entering or returning to a field, and the language that comes with it. Common terms like 'customer service' or 'scientific method' carry specific meanings and ways of acting that have to be learned." },
+    { num: "05", name: "Reading books practices", desc: "Reading fiction and extended narrative — novels, short stories, graphic novels, biography, true crime. The focus is on sustained engagement, not information extraction. Adult learners build fluency, develop empathy, and — perhaps most importantly — begin to see themselves as readers. Choice matters here: what a learner picks up and wants to finish tells you something no assessment can." },
+    { num: "06", name: "Creative and expressive practices", desc: "Writing and reading that starts with the learner's own voice and experience — personal narrative, poetry, memoir, community storytelling. The text belongs to the writer, not to a system or a field. This practice builds literacy from the inside out: through expression, reflection, and the experience of having something worth saying. For many adult learners it is the most powerful entry point into literacy, and the most consistently undervalued." }
+  ];
+  var active = -1;
+  function selectPractice(i) {
+    if (active === i) {
+      active = -1;
+      document.getElementById('detail-panel').innerHTML = '';
+      document.getElementById('pc-' + i).classList.remove('active');
+      return;
+    }
+    if (active >= 0) document.getElementById('pc-' + active).classList.remove('active');
+    active = i;
+    document.getElementById('pc-' + i).classList.add('active');
+    var p = practices[i];
+    document.getElementById('detail-panel').innerHTML =
+      '<p class="detail-num">' + p.num + '</p>' +
+      '<p class="detail-name">' + p.name + '</p>' +
+      '<p class="detail-desc">' + p.desc + '</p>';
+  }
+</script>
+</body>
+</html>
