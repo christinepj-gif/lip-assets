@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LiP Resource Card</title>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: transparent; font-family: Arial, sans-serif; padding: 8px; }
+  .card {
+    background: #E4F2F8;
+    border-radius: 10px;
+    padding: 22px 26px;
+    border: 1px solid rgba(111,176,201,0.3);
+    max-width: 620px;
+  }
+  .card-tag {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #6FB0C9;
+    margin-bottom: 10px;
+    display: block;
+  }
+  .card-title {
+    font-family: 'Merriweather', Georgia, serif;
+    font-size: 17px;
+    font-weight: 500;
+    color: #1B3247;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+  .card-desc {
+    font-size: 14px;
+    color: #1B3247;
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+  .card-link {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 500;
+    color: #6FB0C9;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+  .card-link:hover { color: #EC7A52; }
+  .card-link::before { content: "→ "; color: #EC7A52; }
+  .card-link.coming-soon {
+    color: #9CA3AF;
+    font-style: italic;
+    cursor: default;
+  }
+  .card-link.coming-soon::before { content: ""; }
+</style>
+</head>
+<body>
+<script>
+  // ── EDIT THESE VALUES TO CUSTOMISE THE CARD ──────────────────
+  var TAG   = "↓ Download";
+  var TITLE = "Foundational Literacy with Adults: A Short Guide for Educators";
+  var DESC  = "A short guide covering the key principles, instructional approaches and what to look for when working with adult learners at the foundational level.";
+  var LINK_TEXT = "Guide coming soon";
+  var LINK_URL  = ""; // Leave empty for "coming soon", or add a URL to activate the link
+  // ─────────────────────────────────────────────────────────────
+
+  document.addEventListener("DOMContentLoaded", function() {
+    document.querySelector(".card-tag").textContent   = TAG;
+    document.querySelector(".card-title").textContent = TITLE;
+    document.querySelector(".card-desc").textContent  = DESC;
+
+    var link = document.querySelector(".card-link");
+    if (LINK_URL) {
+      link.href = LINK_URL;
+      link.target = "_blank";
+      link.textContent = LINK_TEXT;
+      link.classList.remove("coming-soon");
+    } else {
+      link.textContent = LINK_TEXT;
+      link.classList.add("coming-soon");
+      link.removeAttribute("href");
+    }
+  });
+</script>
+
+<div class="card">
+  <span class="card-tag"></span>
+  <p class="card-title"></p>
+  <p class="card-desc"></p>
+  <a class="card-link"></a>
+</div>
+</body>
+</html>
